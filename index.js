@@ -14,15 +14,10 @@
       addingEventListener();
       expect(input.addEventListener.called).to.be.true;
     })*/
-function addingEventListener() {
-    const input = document.querySelector('#input')
-    function clickAlert(){
-        return alert("Clicked");
-
+function addingEventListener(){
+    const input = document.getElementById('input');
+    input.addEventListener('click', clickAlert);
+         function clickAlert(){
+                alert('Clicked');
     }
-
-
-    
-input.addEventListener('click', clickAlert)
 }
-
